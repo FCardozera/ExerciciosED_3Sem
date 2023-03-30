@@ -1,4 +1,4 @@
-package exercicios.marco1;
+package exercicios.marco1.atvd01;
 
 public class PontoCartesiano {
     private static int idPontoGeral = 01;

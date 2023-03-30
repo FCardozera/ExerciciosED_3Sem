@@ -1,4 +1,4 @@
-package exercicios.marco1;
+package exercicios.marco1.atvd01;
 
 import java.util.LinkedList;
 

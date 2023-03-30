@@ -1,4 +1,4 @@
-package exercicios.marco1;
+package exercicios.marco1.atvd01;
 
 public class Main {
     public static void main( String[] args ) {
