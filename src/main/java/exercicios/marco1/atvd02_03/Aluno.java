@@ -1,4 +1,4 @@
-package exercicios.marco1.atvd02;
+package exercicios.marco1.atvd02_03;
 
 public class Aluno {
     private String nome;
