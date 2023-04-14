@@ -1,4 +1,4 @@
-package exercicios.marco1.atvd02_03;
+package exercicios.marco1.atvd03_04;
 
 public class Aluno {
     private String nome;
@@ -33,5 +33,9 @@ public class Aluno {
 
     public void setNota(double nota) {
         this.nota = nota;
+    }
+
+    public String toString() {
+        return (nome);
     }
 }

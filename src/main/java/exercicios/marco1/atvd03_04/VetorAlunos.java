@@ -1,4 +1,4 @@
-package exercicios.marco1.atvd02_03;
+package exercicios.marco1.atvd03_04;
 
 public class VetorAlunos implements IVetor{
     private Aluno[] alunos;
