@@ -70,13 +70,13 @@ public class VetorInt implements IVetor{
         int max1 = 0;
         int max2 = 0;
 
-        if(inicio == fim) {
+        if(inicio == (fim)) {
             return vetorInt[inicio];
         } else {
-            meio = (inicio + tamanhoAtual) / 2;
+            meio = (inicio + fim) / 2;
             max1 = maiorElementoRec(inicio, meio);
-            max2 = maiorElementoRec((meio + 1), fim);
-            if (max1 > max2) {
+            max2 = maiorElementoRec((meio + 1), (fim));
+            if (max1 > max2) { 
                 return max1;
             } else {
                 return max2;
