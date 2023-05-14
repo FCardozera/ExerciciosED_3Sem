@@ -1,4 +1,4 @@
-package exercicios.marco1.atvd08;
+package exercicios.marco1.atvd07;
 
 public interface IVetor {
     public void adiciona(int numero);
