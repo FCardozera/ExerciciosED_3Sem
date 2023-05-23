@@ -11,11 +11,11 @@ public class Main {
         vetorInt01.adiciona(5);
         vetorInt02.adiciona(6);
         vetorInt01.adiciona(4);
-        vetorInt02.adiciona(4);
+        vetorInt02.adiciona(3);
         vetorInt01.adiciona(2);
         vetorInt02.adiciona(9);
         vetorInt01.adiciona(3);
-        vetorInt02.adiciona(3);
+        vetorInt02.adiciona(4);
 
         System.out.println("Vetor 1:" + vetorInt01.imprimeVetor());
         System.out.println("Vetor 2: " + vetorInt02.imprimeVetor());
@@ -33,10 +33,14 @@ public class Main {
         if (vetor1.tamanho() == vetor2.tamanho()) {
             // Iteração no tamanho dos vetores
             for (int i = 0; i < vetor1.tamanho(); i++) {
-                //Verifica se é igual
-                if (vetor1.getVetorInt()[i] == vetor2.getVetorInt()[i]) {
-                    // Se igual -> Adiciona no vetorRetorno
-                    vetorRetorno.adiciona(vetor1.getVetorInt()[i]);
+                for (int j = 0; j < vetor2.tamanho(); j++) {
+                    //Verifica se é igual
+                    if (vetor1.getVetorInt()[i] == vetor2.getVetorInt()[j]) {
+                        // Se igual e o número ainda não existe no vetorRetorno -> Adiciona no vetorRetorno
+                        if (!(vetorRetorno.contem(vetor2.getVetorInt()[j]))) {
+                            vetorRetorno.adiciona(vetor2.getVetorInt()[j]);
+                        }
+                    }
                 }
             }
 
