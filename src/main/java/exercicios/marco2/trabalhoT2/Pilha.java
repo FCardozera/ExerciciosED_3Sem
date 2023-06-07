@@ -50,6 +50,7 @@ public class Pilha {
         return this.pilha[numElementos - 1];
     }
 
+    // Exercício 03 - Método de impressão de pilha
     public String toString() {
         String retorno = "";
 
@@ -85,7 +86,5 @@ public class Pilha {
             System.out.println("Pilha deve estar vazia para realizar essa verificação");
             return false;
         }
-        
-        
     }
 }
