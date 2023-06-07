@@ -10,7 +10,16 @@ public class Main {
         System.out.println(listaInteiros.imprimeInicio());
 
         listaInteiros.add_ordenado(10);
-
+        listaInteiros.add_ordenado(2);
+        listaInteiros.add_ordenado(1);
+        listaInteiros.add_ordenado(8);
+        listaInteiros.add_ordenado(4);
+        listaInteiros.add_ordenado(600);
+        listaInteiros.add_ordenado(4);
+        listaInteiros.add_ordenado(5);
+        listaInteiros.add_ordenado(7);
+        listaInteiros.add_ordenado(80);
+        listaInteiros.add_ordenado(6);
 
         System.out.println(listaInteiros.imprimeInicio());
     }
