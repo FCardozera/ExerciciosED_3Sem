@@ -1,4 +1,4 @@
-package exercicios.marco1.exercicios_p1.questao01;
+package exercicios.marco1.atvd10_exercicios_p1.questao01;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package exercicios.marco1.exercicios_p1.questao06;
+package exercicios.marco1.atvd10_exercicios_p1.questao06;
 
 //EXEMPLO QUESTAO 05
 public class Main {

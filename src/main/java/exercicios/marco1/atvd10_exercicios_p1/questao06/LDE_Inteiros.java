@@ -1,6 +1,6 @@
-package exercicios.marco1.exercicios_p1.questao05;
+package exercicios.marco1.atvd10_exercicios_p1.questao06;
 
-// MÉTODO DA QUESTÃO 5 NO FINAL DA CLASSE
+// MÉTODO DA QUESTÃO 6 NO FINAL DA CLASSE
 
 public class LDE_Inteiros {
     private Noh_Inteiro inicio;
@@ -126,8 +126,6 @@ public class LDE_Inteiros {
         }
     }
 
-    // MÉTODO QUESTÃO 05 - P1
-
     public int nroPares() {
         Noh_Inteiro aux = this.inicio;
         int nroPares = 0;
@@ -143,5 +141,42 @@ public class LDE_Inteiros {
 
         }
         return nroPares;
+    }
+
+    // MÉTODO QUESTÃO 06 - P1
+
+    public void add_ordenado(int inteiro) {
+        Noh_Inteiro novo = new Noh_Inteiro(inteiro);
+        Noh_Inteiro aux = new Noh_Inteiro(inteiro);
+        aux = inicio;
+
+        if (this.inicio == null) {
+            this.inicio = novo;
+            fim = novo;
+        } else {
+            if (inicio.getProximo() == null) {
+                if (inicio.getInteiro() <= inteiro) {
+                    novo.setAnterior(fim);
+                    fim.setProximo(novo);
+                    fim = novo;
+                } else {
+                    novo.setProximo(this.inicio);
+                    this.inicio.setAnterior(novo);
+                    this.inicio = novo;
+                }
+            }
+            while (aux != null && aux.getInteiro() < novo.getInteiro()) {
+                aux = aux.getProximo();
+            }
+            if (aux == fim) {
+                novo.setAnterior(aux);
+                aux.setProximo(aux);
+                fim = novo;
+            } else {
+                novo.setAnterior(aux);
+                novo.setProximo(aux.getProximo());
+                aux.setProximo(novo);
+            }
+        }
     }
 }
