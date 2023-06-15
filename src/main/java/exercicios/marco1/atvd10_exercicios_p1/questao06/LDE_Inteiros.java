@@ -146,37 +146,31 @@ public class LDE_Inteiros {
     // MÉTODO QUESTÃO 06 - P1
 
     public void add_ordenado(int inteiro) {
-        Noh_Inteiro novo = new Noh_Inteiro(inteiro);
-        Noh_Inteiro aux = new Noh_Inteiro(inteiro);
-        aux = inicio;
 
-        if (this.inicio == null) {
-            this.inicio = novo;
+        Noh_Inteiro novo = new Noh_Inteiro(inteiro);
+
+        if (inicio == null) {
+            inicio = novo;
+            fim = novo;
+        } else if (inteiro < inicio.getInteiro()) {
+            novo.setProximo(inicio);
+            inicio.setAnterior(novo);
+            inicio = novo;
+        } else if (inteiro > fim.getInteiro()) {
+            novo.setAnterior(fim);
+            fim.setProximo(novo);
             fim = novo;
         } else {
-            if (inicio.getProximo() == null) {
-                if (inicio.getInteiro() <= inteiro) {
-                    novo.setAnterior(fim);
-                    fim.setProximo(novo);
-                    fim = novo;
-                } else {
-                    novo.setProximo(this.inicio);
-                    this.inicio.setAnterior(novo);
-                    this.inicio = novo;
-                }
+            Noh_Inteiro p = inicio;
+
+            while (p != null && p.getInteiro() < inteiro) {
+                p = p.getProximo();
             }
-            while (aux != null && aux.getInteiro() < novo.getInteiro()) {
-                aux = aux.getProximo();
-            }
-            if (aux == fim) {
-                novo.setAnterior(aux);
-                aux.setProximo(aux);
-                fim = novo;
-            } else {
-                novo.setAnterior(aux);
-                novo.setProximo(aux.getProximo());
-                aux.setProximo(novo);
-            }
+
+            novo.setProximo(p);
+            novo.setAnterior(p.getAnterior());
+            p.getAnterior().setProximo(novo);
+            p.setAnterior(novo);
         }
     }
 }
